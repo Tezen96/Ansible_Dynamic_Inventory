@@ -1,0 +1,16 @@
+---
+# tasks file for my_role
+ - amazon.aws.ec2_instance:
+          name: "my-instance"
+          aws_access_key:  "{{ access_key }}"
+          aws_secret_key: "{{ secret_key }}"
+          region: ap-southeast-2
+          instance_type: t2.micro
+          image_id: ami-03f0544597f43a91d
+          count: 1
+          wait: yes
+          vpc_subnet_id: subnet-0a71c5d0ed6824e1b
+          key_name: ansible
+          network:
+            assign_public_ip: true
+            security_group: default

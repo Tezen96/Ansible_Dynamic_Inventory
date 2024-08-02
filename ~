@@ -1,0 +1,8 @@
+---
+- name: Launch Ec2 Instance
+  hosts: localhost
+  
+            
+
+ 
+       
